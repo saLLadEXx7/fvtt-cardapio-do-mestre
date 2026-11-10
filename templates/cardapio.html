@@ -1,0 +1,50 @@
+<form class="cardapio-shell">
+  <header class="cc-header">
+    <div><h1>⚓ Cardápio do Capitão</h1><p>Comidas, bebidas e provisões da tripulação</p></div>
+    {{#if isGM}}<button type="button" data-edit-catalog>Editar catálogo</button>{{/if}}
+  </header>
+  <nav class="cc-tabs">
+    <button type="button" data-tab="catalog-panel" class="active">Cardápio</button>
+    <button type="button" data-tab="stock-panel">Baú do Grupo ({{stock.length}})</button>
+    <button type="button" data-open-chest>Abrir Container na ficha</button>
+  </nav>
+  <section id="catalog-panel" class="tab-panel">
+    {{#each categories as |category|}}
+      <h2>{{category}}</h2>
+      <div class="cc-grid">
+        {{#each ../catalog as |item|}}
+          {{#if (eq item.category category)}}
+            <article class="cc-item">
+              {{#if item.image}}<img src="{{item.image}}" alt="{{item.name}}">{{else}}<div class="cc-placeholder">🍲</div>{{/if}}
+              <div class="cc-item-body"><h3>{{item.name}}</h3><p>{{item.description}}</p>
+                <p class="cc-effect"><strong>Efeito:</strong> {{item.effectText}}</p>
+                <div class="cc-price">{{item.price}}</div>
+                <button type="button" data-buy="{{item.id}}">Solicitar ao baú</button>
+              </div>
+            </article>
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/each}}
+  </section>
+  <section id="stock-panel" class="tab-panel" style="display:none">
+    {{#if stock.length}}
+      <div class="cc-grid">
+        {{#each stock as |item|}}
+          <article class="cc-item">
+            {{#if item.image}}<img src="{{item.image}}" alt="{{item.name}}">{{else}}<div class="cc-placeholder">🍲</div>{{/if}}
+            <div class="cc-item-body"><h3>{{item.name}}</h3><p>{{item.description}}</p>
+              <p class="cc-effect"><strong>Efeito:</strong> {{item.effectText}}</p>
+              <div class="cc-price">Quantidade: {{item.quantity}} · {{item.price}}</div>
+              <div class="cc-actions">
+                <button type="button" data-consume="{{item.stockId}}">Consumir</button>
+                {{#if ../isGM}}<button type="button" data-stock-remove="{{item.id}}">− 1</button>{{/if}}
+              </div>
+            </div>
+          </article>
+        {{/each}}
+      </div>
+    {{else}}<p class="cc-empty">O baú está vazio. O mestre pode adicionar produtos pelo cardápio.</p>{{/if}}
+  </section>
+  <footer>Os pagamentos são controlados manualmente pelo mestre.</footer>
+</form>
