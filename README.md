@@ -1,42 +1,66 @@
-# Cardápio do Capitão — Foundry VTT v14 / D&D 5e
+# 🍻 Cardápio do Capitão
 
-## Instalação / atualização
-1. Faça backup do mundo.
-2. Extraia a pasta `cardapio-do-capitao` em `Data/modules/`, substituindo a versão anterior.
-3. Reinicie o Foundry e confirme que o módulo está habilitado.
-4. Entre como Mestre. A atualização substitui o catálogo de exemplo antigo pelo cardápio correto e, se o estoque estiver vazio, cadastra uma unidade de cada um dos oito produtos no **Baú do Grupo**.
+**Um módulo para Foundry Virtual Tabletop que adiciona um cardápio de comidas e bebidas com temática náutica e medieval, trazendo benefícios especiais para os aventureiros.**
 
-## Produtos incluídos
-- 1. Espuma do Kraken — 25 PO
-- 2. Hidromel das Marés — 50 PO
-- 3. Licor da Sereia — 30 PO
-- 4. Vinho de Algas Douradas — 75 PO
-- 6. Carapaça Crocante — 90 PO
-- 7. Ensopado dos Sete Mares — 70 PO
-- 8. Peixe do Farol — 35 PO
-- 9. Baiacu Flamejante — 65 PO
+O *Cardápio do Capitão* permite que o Mestre disponibilize alimentos e bebidas em um estoque compartilhado, acessível aos jogadores. Cada item possui descrição, preço e um efeito especial que pode ser ativado ao consumi-lo.
 
-O número 5 foi mantido ausente, conforme a imagem original. Cada item inclui descrição, efeito e preço no texto do documento Item. O estoque inicial é de uma unidade por produto.
+## ⚓ Funcionalidades
 
-## Baú compartilhado
-O Mestre cria ou reutiliza o ator **Baú do Grupo**, com permissão padrão de proprietário para os jogadores, e o Container **Estoque do Cardápio**. Os itens são sincronizados como documentos Item no ator e associados ao Container. Os preços são apenas informativos: nenhuma moeda é descontada automaticamente.
+- **Cardápio interativo:** apresentação dos alimentos e bebidas disponíveis.
+- **Baú compartilhado:** criação automática de um ator chamado *Baú do Grupo* na aba Actors.
+- **Estoque centralizado:** os itens ficam organizados no container *Estoque do Cardápio*.
+- **Acesso para os jogadores:** todos os jogadores podem consultar o estoque.
+- **Itens consumíveis:** os alimentos podem ser arrastados para o inventário dos personagens.
+- **Consumo de itens:** ao utilizar um alimento, uma unidade é descontada do inventário.
+- **Efeitos especiais:** os benefícios são aplicados ao personagem conforme o item consumido.
+- **Mensagens no chat:** o consumo e seus efeitos são apresentados no chat do Foundry.
+- **Pagamento manual:** não existe cobrança automática; o Mestre controla os pagamentos.
 
-## Importante sobre os benefícios
-Esta atualização corrige o cadastro dos oito produtos e seu preenchimento automático no baú. Os benefícios estão registrados nas descrições dos itens. A aplicação automática de todos os efeitos especiais (bônus no próximo teste, inspiração, recuperação de espaços de magia e ação bônus) ainda depende de integração específica com a versão exata do sistema D&D 5e e deve ser validada separadamente; não considere todos esses efeitos automatizados apenas por instalar esta versão.
+## 🍖 Cardápio disponível
 
-## Compatibilidade
-Versão experimental para Foundry VTT v14 e sistema D&D 5e. Faça o primeiro teste em uma cópia do mundo. Se os itens aparecerem fora do Container, informe a versão exata do sistema D&D 5e e envie uma captura da ficha do Baú do Grupo.
+| Item | Preço | Benefício |
+|---|---:|---|
+| Espuma do Kraken | 25 PO | +1d4 no próximo teste de Constituição |
+| Hidromel das Marés | 50 PO | Concede 1 Inspiração |
+| Licor da Sereia | 30 PO | +1d4 no próximo teste de Destreza |
+| Vinho de Algas Douradas | 75 PO | Recupera 1 espaço de magia gasto |
+| Carapaça Crocante | 90 PO | +1 na CA por 10 minutos |
+| Ensopado dos Sete Mares | 70 PO | +2 no próximo ataque |
+| Peixe do Farol | 35 PO | Vantagem no próximo teste de Percepção |
+| Baiacu Flamejante | 65 PO | Permite causar 1d4 de dano de fogo como ação bônus |
 
+*PO = Peças de Ouro.*
 
-### Imagens dos produtos (v0.4.0)
-As oito ilustrações estão incluídas em `assets/items/` e são carregadas diretamente pelo módulo. Ao iniciar como Mestre, o módulo atualiza os caminhos de imagem dos oito produtos já cadastrados e sincroniza as imagens no inventário do Baú do Grupo.
+## 🛠️ Compatibilidade
 
+- **Foundry Virtual Tabletop:** v14
+- **Sistema:** Dungeons & Dragons 5th Edition
+- **Versão do sistema D&D5e:** 6.0.6
 
-### Versão 0.4.1
-- Adicionada uma ilustração própria para o Container “Estoque do Cardápio”, armazenada em `assets/estoque-do-cardapio.webp`.
+## 📦 Instalação
 
+1. Baixe a versão mais recente do módulo.
+2. Extraia a pasta `cardapio-do-capitao` na pasta `Data/modules` do Foundry VTT.
+3. Inicie o Foundry e acesse seu mundo.
+4. Entre em **Gerenciar Módulos**.
+5. Ative o **Cardápio do Capitão**.
+6. Entre no mundo como Mestre e aguarde a criação do Baú do Grupo.
 
-## v0.4.3
-- Itens do estoque configurados como consumíveis com Activity **Usar**.
-- A Activity usa um alvo de consumo `ammo` apontado para o próprio item, para solicitar a redução de uma unidade da quantidade do inventário quando usada.
-- Ao atualizar itens existentes, a Activity e o alvo são reconstruídos.
+## 🎲 Como utilizar
+
+1. O Mestre abre o cardápio e disponibiliza os produtos.
+2. Os jogadores consultam os alimentos e seus preços.
+3. O pagamento é combinado e controlado manualmente pelo Mestre.
+4. Os itens são retirados do estoque compartilhado.
+5. Os jogadores arrastam os itens para seus inventários.
+6. Ao consumir um item, seu benefício é aplicado conforme sua funcionalidade.
+
+## 🚧 Desenvolvimento
+
+O módulo está em desenvolvimento e novas funcionalidades e melhorias poderão ser adicionadas.
+
+## ❤️ Créditos
+
+Projeto desenvolvido para uso em campanhas de RPG de mesa utilizando Foundry Virtual Tabletop e Dungeons & Dragons 5e.
+
+**Bom apetite, aventureiros! Que os mares sejam generosos e os dados estejam a seu favor!** ⚓
