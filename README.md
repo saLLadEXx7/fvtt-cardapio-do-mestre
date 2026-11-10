@@ -6,6 +6,9 @@ O *Cardápio do Capitão* permite que o Mestre disponibilize alimentos e bebidas
 
 ## ⚓ Funcionalidades
 
+<img width="923" height="502" alt="image" src="https://github.com/user-attachments/assets/f4a50f9b-14e1-48bd-b159-0ee82f5e1a46" />
+
+
 - **Cardápio interativo:** apresentação dos alimentos e bebidas disponíveis.
 - **Baú compartilhado:** criação automática de um ator chamado *Baú do Grupo* na aba Actors.
 - **Estoque centralizado:** os itens ficam organizados no container *Estoque do Cardápio*.
