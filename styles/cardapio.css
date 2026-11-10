@@ -1,0 +1,10 @@
+.cardapio-capitao .window-content{background:#211a15;color:#f1dfb6;padding:0}
+.cardapio-shell{font-family:Georgia,serif;background:linear-gradient(135deg,#34251b,#17120f);min-height:100%;padding:18px;color:#f1dfb6}
+.cc-header{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #9c7440;padding-bottom:12px}
+.cc-header h1{font-size:25px;margin:0;color:#e8c98e}.cc-header p{margin:5px 0 0;color:#c7ad82}
+.cc-tabs{display:flex;gap:8px;margin:14px 0}.cc-tabs button,.cc-item button,.cc-header button{background:#76502c;border:1px solid #bd9456;color:#fff0cf;border-radius:5px;padding:7px 12px;cursor:pointer}
+.cc-tabs button.active{background:#a87539}.cc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.cc-item{display:flex;flex-direction:column;background:#eee0bd;color:#352417;border:3px solid #8d6538;border-radius:7px;overflow:hidden;box-shadow:0 3px 8px #0008}
+.cc-item img,.cc-placeholder{width:100%;height:125px;object-fit:cover;background:#cbb58b}.cc-placeholder{display:grid;place-items:center;font-size:52px}
+.cc-item-body{padding:10px}.cc-item h3{margin:0 0 5px;font-size:17px}.cc-item p{font-size:12px;min-height:30px}.cc-price{font-weight:bold;color:#704719;margin:8px 0}.cc-item button{margin:3px 3px 0 0}
+.cc-empty{text-align:center;padding:45px 10px}.cardapio-shell footer{margin-top:18px;padding-top:10px;border-top:1px solid #9c7440;font-size:11px;color:#c7ad82}
