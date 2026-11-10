@@ -1,0 +1,25 @@
+{
+  "id": "cardapio-do-capitao",
+  "title": "Cardápio do Capitão",
+  "description": "Cardápio de comidas e bebidas com baú compartilhado e consumíveis para D&D 5e.",
+  "version": "0.5.1",
+  "authors": [
+    {
+      "name": "OpenAI"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "systems": [
+    "dnd5e"
+  ],
+  "esmodules": [
+    "scripts/cardapio.js"
+  ],
+  "styles": [
+    "styles/cardapio.css"
+  ],
+  "socket": true
+}
